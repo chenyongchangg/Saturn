@@ -243,7 +243,7 @@ public class NamespaceShardingService {
 			lock.unlock();
 		}
 	}
-
+    // cnote leader 选举
 	private void becomeLeader() throws Exception {
 		// 清理、重置变量
 		executorService.shutdownNow();

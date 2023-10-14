@@ -74,6 +74,7 @@ public abstract class AbstractAsyncShardingTask implements Runnable {
 	protected List<String> notifyEnableJobsPrior() {
 		return null;
 	}
+	// cnote 通用分片逻辑
 
 	@Override
 	public void run() {
@@ -396,6 +397,7 @@ public abstract class AbstractAsyncShardingTask implements Runnable {
 		return shardingTotalCount;
 	}
 
+	// 从cnote 获取工作负载
 	protected int getLoadLevel(String jobName) throws Exception {
 		int loadLevel = LOAD_LEVEL_DEFAULT;
 		String jobConfigLoadLevelNodePath = SaturnExecutorsNode.getJobConfigLoadLevelNodePath(jobName);
@@ -480,6 +482,7 @@ public abstract class AbstractAsyncShardingTask implements Runnable {
 		return nonDockerExecutors;
 	}
 
+	// cnote 通用放回逻辑
 	protected void putBackBalancing(List<String> allEnableJobs, List<Shard> shardList,
 			List<Executor> lastOnlineExecutorList, List<Executor> lastOnlineTrafficExecutorList) throws Exception {
 		if (lastOnlineExecutorList.isEmpty()) {

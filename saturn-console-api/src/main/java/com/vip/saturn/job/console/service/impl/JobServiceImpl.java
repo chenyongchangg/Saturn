@@ -63,6 +63,7 @@ import java.util.regex.Pattern;
 import static com.vip.saturn.job.console.exception.SaturnJobConsoleException.ERROR_CODE_BAD_REQUEST;
 import static com.vip.saturn.job.console.exception.SaturnJobConsoleException.ERROR_CODE_NOT_EXISTED;
 
+// cnote zk all job config parameters
 public class JobServiceImpl implements JobService {
 
 	public static final String CONFIG_ITEM_LOAD_LEVEL = "loadLevel";
@@ -2368,6 +2369,7 @@ public class JobServiceImpl implements JobService {
 		}
 	}
 
+	// cnote update zk
 	private void updateJobConfigToZk(JobConfig jobConfig, Set<JobConfig> streamChangedJobs,
 			CuratorRepository.CuratorFrameworkOp curatorFrameworkOp) throws SaturnJobConsoleException {
 		try {

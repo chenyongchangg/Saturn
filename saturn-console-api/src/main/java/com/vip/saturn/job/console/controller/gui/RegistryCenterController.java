@@ -42,7 +42,7 @@ public class RegistryCenterController extends AbstractGUIController {
 
 	private static final String EXPORT_FILE_NAME = "namespace_info.xls";
 
-	@Resource
+		@Resource
 	private NamespaceZkClusterMappingService namespaceZkClusterMappingService;
 
 	/**
